@@ -31,7 +31,7 @@ export const addIncome = async (req, res) => {
 
         return res.status(201).json({ message: 'Income added successfully', transaction: newTransaction });
     } catch (error) {
-        console.error('Error adding income:', error.message);
+        // console.error('Error adding income:', error.message);
         return res.status(500).json({ error: 'Internal Server Error' });
     }
 }
@@ -66,7 +66,7 @@ export const addExpence = async (req, res) => {
 
         return res.status(201).json({ message: 'Expense added successfully', transaction: newTransaction });
     } catch (error) {
-        console.error('Error adding expense:', error.message);
+        // console.error('Error adding expense:', error.message);
         return res.status(500).json({ error: 'Internal Server Error' });
     }
 }

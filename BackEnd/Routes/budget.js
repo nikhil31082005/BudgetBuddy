@@ -10,4 +10,4 @@ Router.get('/:userId',authenticateJWT, getBudget);
 Router.delete('/deleteBudget/:id', authenticateJWT, deleteBudget);
 
 
-export default Router;
+export default Router; 

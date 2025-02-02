@@ -13,7 +13,7 @@ export const profile =  async (req, res) => {
         return res.status(200).json(user);
     }
     catch(error){
-        console.log("Error in getUserProfile: ", error.message);
+        // console.log("Error in getUserProfile: ", error.message);
 		res.status(500).json({ error: error.message });
     }
 };
@@ -47,7 +47,7 @@ export const editProfile = async (req, res) => {
                     }
                 ).end(image.buffer); // Use buffer to handle file upload
             });
-            console.log('Cloudinary Upload Result:', uploadResult);
+            // console.log('Cloudinary Upload Result:', uploadResult);
             imageUrl = uploadResult.secure_url;
         }
 
@@ -70,7 +70,7 @@ export const editProfile = async (req, res) => {
             user: updatedUser,
         });
     } catch (err) {
-        console.error('Error updating profile:', err);
+        // console.error('Error updating profile:', err);
         res.status(500).json({ error: 'Failed to update profile' });
     }
 };

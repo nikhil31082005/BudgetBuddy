@@ -7,7 +7,7 @@ import budgetRoute from './Routes/budget.js';
 import goalRoute from './Routes/goal.js';
 import connectMongoDB from './Database/connectToMongoDB.js';
 import cookieParser from 'cookie-parser';
-// import { authenticateJWT } from './Middleware/protectedRoute.js';
+// import { authenticateJWT } fro m './Middleware/protectedRoute.js';
 import dotenv from 'dotenv';
 import cloudinary from './cloudinaryConfig.js';
 import multer from 'multer';
@@ -17,7 +17,6 @@ const storage = multer.memoryStorage();
 
 
 dotenv.config();
-
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -31,7 +30,7 @@ cloudinary.config({
 const app = express();
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: process.env.CORS_URL,
     credentials: true,
 };
 app.use(cors(corsOptions));

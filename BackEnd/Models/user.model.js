@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
             required: true,
         },
         profileImage: { 
-            type: String 
+            type: String  
         },
         jobType: {
             type: String,

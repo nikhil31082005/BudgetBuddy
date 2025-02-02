@@ -13,4 +13,4 @@ Router.get('/profile', authenticateJWT, profile);
 Router.post('/edit-profile', authenticateJWT , upload.single('image'), editProfile);
 
 
-export default Router;
+export default Router; 

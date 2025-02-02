@@ -45,7 +45,7 @@ export const getGoals = async (req, res) => {
 
 export const updataGoals = async (req, res) => {
     const { goalId } = req.params;
-    const { currentAmount } = req.body;
+    const { currentAmount } =  req.body;
     try {
         const updatedGoal = await Goal.findByIdAndUpdate(goalId, {currentAmount});
         return res.status(200).json({message: 'Amount updated successfully', goal: updatedGoal});

@@ -11,7 +11,7 @@ const goalSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
-    targetAmount: {
+    targetAmount: { 
         type: Number,
         required: true,
     },

@@ -10,7 +10,7 @@ export const authenticateJWT = async (req, res, next) => {
     // console.log(req.cookies);
     const token = req.cookies.token;
     
-    if (!token) {
+    if (!token) { 
         return res.status(401).json({ message: 'Access Denied: No token provided' });
     }
 

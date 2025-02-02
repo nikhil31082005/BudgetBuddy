@@ -45,7 +45,7 @@ export const deleteBudget = async (req, res) => {
             return res.status(404).json({ message: 'Budget not found!' });
         }
 
-        return res.status(200).json({ message: 'Budget deleted successfully', budget: deletedBudget });
+        return res.status(200).json({  message: 'Budget deleted successfully', budget: deletedBudget });
     } catch (error) {
         return res.status(500).json({ error: 'Failed to delete budget', details: error.message });
     }
@@ -63,3 +63,4 @@ export const deleteBudget = async (req, res) => {
 //         return res.status(500).json({ error: 'Failed to update budget', details: error.message });
 //     }
 // }
+

@@ -6,6 +6,6 @@ const budgetSchema = new mongoose.Schema({
     amount: { type: Number, required: true },
     startDate: { type: Date, required: true },
     endDate: { type: Date, required: true },
-}, { timestamps: true });
+}, { timestamps: true  });
 
 export default mongoose.model('Budget', budgetSchema);

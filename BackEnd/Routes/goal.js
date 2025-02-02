@@ -10,3 +10,4 @@ Router.put('/update/:goalId', authenticateJWT, updataGoals);
 
 
 export default Router;
+ 

@@ -123,7 +123,7 @@ export const getMe = async (req, res) => {
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
-
+        
         // Return user data excluding sensitive info (like password)
         const userData = {
             _id: user._id,
